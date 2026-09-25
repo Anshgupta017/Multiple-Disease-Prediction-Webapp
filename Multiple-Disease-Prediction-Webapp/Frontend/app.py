@@ -44,23 +44,43 @@ div[data-testid="stMetric"] { background: grey; border: 1px solid #e2e8f0; paddi
 """, unsafe_allow_html=True)
 
 # diabetes_model = joblib.load("models/diabetes_model.sav")
-diabetes_model = joblib.load("models/diabetes_model_5features.joblib")
-heart_model = joblib.load("models/heart_disease_model.sav")
+import os
+import joblib
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+diabetes_model = joblib.load(
+    os.path.join(BASE_DIR, "models", "diabetes_model_5features.joblib")
+)
+heart_model = joblib.load(
+    os.path.join(BASE_DIR, "models", "heart_disease_model.sav")
+)
 # parkinson_model = joblib.load("models/parkinsons_model.sav")
 # Load the lung cancer prediction model
-lung_cancer_model = joblib.load('models/lung_cancer_model.sav')
+liver_model = joblib.load(
+    os.path.join(BASE_DIR, "models", "liver_model.sav")
+)
 
 # Load the pre-trained model
-breast_cancer_model = joblib.load('models/breast_cancer.sav')
+breast_cancer_model = joblib.load(
+    os.path.join(BASE_DIR, "models", "breast_cancer.sav")
+)
 
 # Load the pre-trained model
-chronic_disease_model = joblib.load('models/chronic_model.sav')
+chronic_disease_model = joblib.load(
+    os.path.join(BASE_DIR, "models", "chronic_model.sav")
+)
 
 # Load the hepatitis prediction model
-hepatitis_model = joblib.load('models/hepititisc_model.sav')
+hepatitis_model = joblib.load(
+    os.path.join(BASE_DIR, "models", "hepatitisc_model.sav")
+)
 
+lung_model = joblib.load(
+    os.path.join(BASE_DIR, "models", "lung_cancer_model.sav")
+)
 
-liver_model = joblib.load('models/liver_model.sav')# Load the lung cancer prediction model
+# liver_model = joblib.load('models/liver_model.sav')# Load the lung cancer prediction model
 
 
 
