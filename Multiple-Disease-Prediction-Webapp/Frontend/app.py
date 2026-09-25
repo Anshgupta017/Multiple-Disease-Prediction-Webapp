@@ -73,7 +73,7 @@ chronic_disease_model = joblib.load(
 
 # Load the hepatitis prediction model
 hepatitis_model = joblib.load(
-    os.path.join(BASE_DIR, "models", "hepatitisc_model.sav")
+    os.path.join(BASE_DIR, "models", "hepititisc_model.sav")
 )
 
 lung_model = joblib.load(
